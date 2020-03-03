@@ -225,16 +225,16 @@ La herramienta de autocorrección preguntará por el correo del alumno y el toke
 Para instalar y hacer uso de la [herramienta de autocorrección](https://www.npmjs.com/package/autocorector) en el ordenador local, ejecuta los siguientes comandos en el directorio del proyecto:
 
 ```
-$ npm run test
+$ autocorector
 ```
 
-Se puede pasar la herramienta de autoorrección tantas veces como se desee sin ninguna repercusión en la calificación.
+Se puede pasar la herramienta autocorector tantas veces como se desee sin ninguna repercusión en la calificación.
 
 ## 7. Instrucciones para la Entrega y Evaluación.
 
 Una vez satisfecho con su calificación, el alumno puede subir su entrega a Moodle con el siguiente comando:
 ```
-$ npm run upload
+$ autocorector --upload
 ```
 
 El alumno podrá subir al Moodle la entrega tantas veces como desee pero se quedará registrada solo la última subida.
@@ -245,4 +245,3 @@ El alumno podrá subir al Moodle la entrega tantas veces como desee pero se qued
 
 Si pasa todos los tests se dará la máxima puntuación. 
 
-**¡Cuidado! Una vez enviadas, tanto la entrega, como la evaluación, no se pueden cambiar.** 
