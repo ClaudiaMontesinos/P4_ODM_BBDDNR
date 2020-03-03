@@ -1,1 +1,297 @@
-const _0x58d3=['Reumatologo','Futbolista','Find\x20Patients\x20by\x20City','Finding\x20Patients\x20with\x20city=\x20Madrid','Cardiologo','Durcal','Síndrome\x20del\x20tunel\x20carpiano','Osteoporosis','Patient\x20created\x20correctly!','medicalHistory','Dermatitis','Barcelona','filterPatientsByCity','Fractura\x20de\x20ligamento\x20cruzado','Traumatologo','The\x20medical\x20record\x20has\x20not\x20been\x20added\x20correctly\x20to\x20the\x20patient\x20with\x20id\x205e4a60fb7be8f229b54a16cb','Frutero','Arritmia','ObjectId','Resfriado','update','../controllers/patient','Lechero','Monitora\x20de\x20tiempo\x20libre','The\x20patient\x20with\x20the\x20id\x205e4a60fb7be8f229b54a16cb\x20has\x20not\x20been\x20shown\x20correctly','../models/patient','Rodriguez','delete','toString','Dermatólogo','Diabetes','collection','Huelva','filterPatientsBySpeacialistAndDate','Finding\x20patient\x20with\x20the\x20id\x205e4a60fb7be8f229b54a16cb','insertMany','Frutera','Ana','Removing\x20Patient\x20with\x20the\x20ID\x205e4a60fb7be8f229b54a16cb','Reading\x20Patient\x20details','Oviedo','Diana','Remove\x20Patient\x20by\x20ID','Ayudante\x20de\x20cocina','Patient\x20shown\x20correctly!','diagnosis','score','555555','Update\x20Patient\x20record','_id','The\x20patients\x20have\x20not\x20been\x20listed\x20correctly','dni','Minero','Neumologo','333444','777777','The\x20patients\x20with\x20Diagnosis=\x20Resfriado\x20have\x20not\x20been\x20retrieved\x20correctly','Getting\x20the\x20list\x20of\x20all\x20available\x20patients','Add\x20Patient\x20History','Cuenca','Directora\x20de\x20subastas','read','Patients\x20listed\x20correctly!','123123','Lopez','Raquel','Creating\x20Patient','Esguince\x20de\x20tobillo','create','222333','Patient\x20updated\x20correctly!','The\x20Patient\x20with\x20the\x20ID\x205e4a60fb7be8f229b54a16cb\x20has\x20been\x20removed\x20correctly!','Endocrinologo','findOne','addPatientHistory','msg_err','The\x20medical\x20record\x20has\x20been\x20added\x20correctly\x20to\x20the\x20patient\x20with\x20id\x205e4a60fb7be8f229b54a16cb!','Types','object','555666','Escorbuto','isNew','The\x20patients\x20Speacialist=\x20Medico\x20de\x20cabecera\x20and\x20dates\x20between\x202016-04-14\x20to\x202016-07-15\x20have\x20not\x20been\x20retrieved\x20correctly','5e3a60fb7be8f029b54a16c9','Filter\x20Patients\x20by\x20Diagnosis','5e4a60fb7be8f229b54a16cb','Madrid','equal','Dueñas','msg_ok','Juan','path','Repartidor','Get\x20Patients\x20list','777888','Melilla','./test_helper','The\x20patient\x20has\x20not\x20been\x20created\x20correctly','The\x20Patient\x20with\x20the\x20ID\x205e4a60fb7be8f229b54a16cb\x20has\x20not\x20been\x20removed\x20correctly','./testutils','Silicosis','Diarrea\x20aguda','Chef','filterPatientsByDiagnosis','Lechon','Pintora','666777','list','Patients\x20with\x20Speacialist=\x20Medico\x20de\x20cabecera\x20and\x20dates\x20between\x202016-04-14\x20to\x202016-07-15\x20have\x20been\x20retrieved\x20correctly!','Medico\x20de\x20cabecera','length','specialist','Arcentales','Patients\x20with\x20Diagnosis=\x20Resfriado\x20have\x20been\x20retrieved\x20correctly!'];(function(_0x4bff4e,_0x270993){const _0x22a2e5=function(_0x200a4b){while(--_0x200a4b){_0x4bff4e['push'](_0x4bff4e['shift']());}};_0x22a2e5(++_0x270993);}(_0x58d3,0x99));const _0x522a=function(_0x4bff4e,_0x270993){_0x4bff4e=_0x4bff4e-0x0;let _0x22a2e5=_0x58d3[_0x4bff4e];return _0x22a2e5;};const path=require(_0x522a('0x34'));const Utils=require(_0x522a('0x3c'));const T_TEST=0x2*0x3c;const controller=require(_0x522a('0x60'));const Patient=require(_0x522a('0x64'));const mongo=require(_0x522a('0x39'));const mongoose=require('mongoose');let error_critical=null;let testPatient;beforeEach(async()=>{const _0x11776f=[{'name':_0x522a('0x33'),'surname':_0x522a('0x65'),'dni':_0x522a('0x18'),'city':_0x522a('0x2f'),'profession':[_0x522a('0x5b'),'Monitor\x20de\x20tiempo\x20libre'],'medicalHistory':[{'specialist':_0x522a('0x46'),'diagnosis':_0x522a('0x5e'),'date':new Date(0x7e1,0x4,0x4)},{'specialist':_0x522a('0x68'),'diagnosis':_0x522a('0x29'),'date':new Date(0x7e0,0xb,0xe)}]},{'name':'Andres','surname':_0x522a('0x19'),'dni':_0x522a('0x1e'),'city':_0x522a('0x14'),'profession':[_0x522a('0x4c')],'medicalHistory':[{'specialist':'Medico\x20de\x20cabecera','diagnosis':'Resaca','date':new Date(0x7e2,0xb,0xe)},{'specialist':_0x522a('0x59'),'diagnosis':_0x522a('0x58'),'date':new Date(0x7df,0x5,0xe)},{'specialist':_0x522a('0x59'),'diagnosis':_0x522a('0x1c'),'date':new Date(0x7e0,0x4,0x18)}]},{'name':'Carlos','surname':_0x522a('0x41'),'dni':_0x522a('0xf'),'city':_0x522a('0x2f'),'profession':[_0x522a('0x61'),_0x522a('0x35')],'medicalHistory':[{'specialist':_0x522a('0x4b'),'diagnosis':_0x522a('0x52'),'date':new Date(0x7e0,0x5,0xe)},{'specialist':_0x522a('0x46'),'diagnosis':_0x522a('0x5e'),'date':new Date(0x7e1,0x1,0x5)}]},{'name':_0x522a('0x2'),'surname':'Pintor','dni':_0x522a('0x28'),'city':_0x522a('0x38'),'profession':[_0x522a('0x42'),_0x522a('0x15')],'medicalHistory':[{'specialist':_0x522a('0x46'),'diagnosis':_0x522a('0x3e'),'date':new Date(0x7e0,0x5,0xe)},{'specialist':_0x522a('0x59'),'diagnosis':_0x522a('0x51'),'date':new Date(0x7e3,0x3,0xf)}]},{'name':_0x522a('0x1a'),'surname':_0x522a('0x31'),'dni':_0x522a('0x43'),'city':_0x522a('0x56'),'profession':[_0x522a('0x3f'),_0x522a('0x4'),'Camarero'],'medicalHistory':[{'specialist':_0x522a('0x4f'),'diagnosis':_0x522a('0x5c'),'date':new Date(0x7e3,0x3,0x1a)},{'specialist':_0x522a('0x46'),'diagnosis':_0x522a('0x55'),'date':new Date(0x7e1,0x1,0x5)}]},{'name':'Mario\x20Alejandro','surname':_0x522a('0x49'),'dni':_0x522a('0x37'),'city':_0x522a('0x1'),'profession':[_0x522a('0xd')],'medicalHistory':[{'specialist':'Endocrino','diagnosis':'Anemia\x20crónica','date':new Date(0x7e2,0xa,0x1a)},{'specialist':_0x522a('0xe'),'diagnosis':_0x522a('0x3d'),'date':new Date(0x7e3,0xa,0x5)}]},{'_id':new mongoose[(_0x522a('0x26'))][(_0x522a('0x5d'))](_0x522a('0x2e')),'name':_0x522a('0x70'),'surname':_0x522a('0x50'),'dni':_0x522a('0x8'),'city':_0x522a('0x6b'),'profession':[_0x522a('0x6f'),_0x522a('0x62')],'medicalHistory':[]}];testPatient={'_id':new mongoose[(_0x522a('0x26'))]['ObjectId'](_0x522a('0x2c')),'name':_0x522a('0x70'),'surname':_0x522a('0x50'),'dni':_0x522a('0x8'),'city':_0x522a('0x6b'),'profession':[_0x522a('0x6f'),_0x522a('0x62')],'medicalHistory':[]};test=await Patient[_0x522a('0x6a')][_0x522a('0x6e')](_0x11776f);});describe('BBDD\x20Tests',function(){describe(_0x522a('0x1b'),function(){it('Creating\x20a\x20new\x20Patient',async function(){this['score']=0x1;this['msg_err']=_0x522a('0x3a');this[_0x522a('0x32')]=_0x522a('0x53');const _0x1a0e4f=await controller[_0x522a('0x1d')](testPatient);const _0x5535d1=await Patient[_0x522a('0x22')]({'_id':_0x522a('0x2c')});should[_0x522a('0x30')](!testPatient[_0x522a('0x2a')],!![]);should[_0x522a('0x30')](_0x1a0e4f[_0x522a('0x67')](),_0x5535d1['toString']());});});describe(_0x522a('0x36'),function(){it(_0x522a('0x12'),async function(){this[_0x522a('0x7')]=0x1;this['msg_err']=_0x522a('0xb');this[_0x522a('0x32')]=_0x522a('0x17');const _0x54fe03=await controller[_0x522a('0x44')]();should[_0x522a('0x30')](_0x54fe03['length'],0x7);should[_0x522a('0x30')](typeof _0x54fe03[0x0],_0x522a('0x27'));});});describe(_0x522a('0x0'),function(){it(_0x522a('0x6d'),async function(){this['score']=0x1;this[_0x522a('0x24')]=_0x522a('0x63');this[_0x522a('0x32')]=_0x522a('0x5');const _0x5c443d=await controller[_0x522a('0x16')](_0x522a('0x2e'));should[_0x522a('0x30')](_0x5c443d[_0x522a('0xa')][_0x522a('0x67')](),_0x522a('0x2e'));});});describe(_0x522a('0x9'),function(){it('Updating\x20Patient\x20with\x20the\x20id\x205e4a60fb7be8f229b54a16cb',async function(){this[_0x522a('0x7')]=0x1;this['msg_err']='The\x20patient\x20with\x20the\x20id\x205e4a60fb7be8f229b54a16cb\x20has\x20not\x20been\x20updated\x20correctly';this['msg_ok']=_0x522a('0x1f');const _0x23573b=await controller[_0x522a('0x5f')]({'_id':_0x522a('0x2e')},{'dni':_0x522a('0x10')});const _0x951270=await Patient['findOne']({'_id':_0x522a('0x2e')});should['equal'](_0x23573b['dni'],_0x951270[_0x522a('0xc')]);});});describe(_0x522a('0x4d'),function(){it(_0x522a('0x4e'),async function(){this[_0x522a('0x7')]=0x1;this[_0x522a('0x24')]='The\x20patients\x20with\x20city=\x20Madrid\x20have\x20not\x20been\x20retrieved\x20correctly';this[_0x522a('0x32')]='Patients\x20retrieved\x20correctly!';const _0x85057a=await controller[_0x522a('0x57')](_0x522a('0x2f'));should[_0x522a('0x30')](_0x85057a['length'],0x2);should[_0x522a('0x30')](typeof _0x85057a[0x0],_0x522a('0x27'));const _0x4d7061=await controller[_0x522a('0x57')](_0x522a('0x56'));should[_0x522a('0x30')](_0x4d7061['length'],0x1);should[_0x522a('0x30')](typeof _0x4d7061[0x0],_0x522a('0x27'));});});describe(_0x522a('0x2d'),function(){it('Filtering\x20Patients\x20with\x20Diagnosis=\x20Osteoporosis',async function(){this[_0x522a('0x7')]=0x1;this[_0x522a('0x24')]='The\x20patients\x20with\x20Diagnosis=\x20Osteoporosis\x20have\x20not\x20been\x20retrieved\x20correctly';this[_0x522a('0x32')]='Patients\x20with\x20Diagnosis=\x20Osteoporosis\x20have\x20been\x20retrieved\x20correctly!';const _0x2fd13a=await controller[_0x522a('0x40')](_0x522a('0x52'));should[_0x522a('0x30')](_0x2fd13a[_0x522a('0x47')],0x1);should[_0x522a('0x30')](typeof _0x2fd13a[0x0],_0x522a('0x27'));this[_0x522a('0x24')]=_0x522a('0x11');this[_0x522a('0x32')]=_0x522a('0x4a');const _0x194f78=await controller[_0x522a('0x40')](_0x522a('0x5e'));should['equal'](_0x194f78[_0x522a('0x47')],0x2);should[_0x522a('0x30')](typeof _0x194f78[0x0],_0x522a('0x27'));});});describe('Filter\x20Patients\x20by\x20Speacialist\x20And\x20Date',function(){it('Filtering\x20Patients\x20with\x20Speacialist=\x20Medico\x20de\x20cabecera\x20and\x20dates\x20between\x202016-04-14\x20to\x202016-07-15',async function(){this[_0x522a('0x7')]=1.5;this['msg_err']=_0x522a('0x2b');this[_0x522a('0x32')]=_0x522a('0x45');const _0x5d425e=await controller[_0x522a('0x6c')](_0x522a('0x46'),new Date(0x7e0,0x4,0xe),new Date(0x7e0,0x7,0xf));should[_0x522a('0x30')](_0x5d425e[_0x522a('0x47')],0x1);should[_0x522a('0x30')](typeof _0x5d425e[0x0],_0x522a('0x27'));});});describe(_0x522a('0x13'),function(){it('Adding\x20record\x20to\x20Patient\x20with\x20the\x20id\x205e4a60fb7be8f229b54a16cb',async function(){this[_0x522a('0x7')]=1.5;this[_0x522a('0x24')]=_0x522a('0x5a');this[_0x522a('0x32')]=_0x522a('0x25');var _0x887005={'specialist':'Endocrinologo','diagnosis':_0x522a('0x69'),'date':new Date(0x7e3,0xa,0x5)};const _0x1924f0=await controller[_0x522a('0x23')]({'_id':'5e4a60fb7be8f229b54a16cb'},_0x887005);const _0xaf887f=await controller[_0x522a('0x23')]({'_id':_0x522a('0x2e')},_0x887005);should[_0x522a('0x30')](_0x1924f0[_0x522a('0x54')][0x0][_0x522a('0x48')],_0x522a('0x21'));should[_0x522a('0x30')](_0x1924f0[_0x522a('0x54')][0x0][_0x522a('0x6')],_0x522a('0x69'));should[_0x522a('0x30')](_0xaf887f['medicalHistory'][0x1][_0x522a('0x6')],_0x522a('0x69'));should[_0x522a('0x30')](_0xaf887f['medicalHistory'][0x1]['specialist'],_0x522a('0x21'));});});describe(_0x522a('0x3'),function(){it(_0x522a('0x71'),async function(){this[_0x522a('0x7')]=0x1;this['msg_err']=_0x522a('0x3b');this[_0x522a('0x32')]=_0x522a('0x20');const _0x1ba2ad=await controller[_0x522a('0x66')](_0x522a('0x2e'));const _0x1ec2f4=await Patient[_0x522a('0x22')]({'_id':'5e4a60fb7be8f229b54a16cb'});should[_0x522a('0x30')](_0x1ec2f4,null);});});});
+// IMPORTS
+const path = require('path');
+const Utils = require('./testutils');
+const T_TEST = 2 * 60; // Time between tests (seconds)
+const controller = require('../controllers/patient');
+const Patient = require('../models/patient');
+const mongo = require('./test_helper');
+const mongoose = require('mongoose');
+
+// CRITICAL ERRORS
+let error_critical = null;
+let testPatient;
+
+beforeEach( async () => {
+	const data = [
+	   {
+			name: 'Juan',
+			surname: 'Rodriguez',
+			dni: '123123',
+			city: "Madrid",
+			profession: [
+				"Frutero",
+				"Monitor de tiempo libre"
+			],
+			medicalHistory: [
+				{
+					"specialist": "Medico de cabecera",
+					"diagnosis": "Resfriado",
+					"date": new Date( 2017,4,4)
+				},
+				{
+					"specialist": "Dermatólogo",
+					"diagnosis": "Escorbuto",
+					"date": new Date( 2016,11,14)
+				}
+			]
+		},
+		{
+			name: 'Andres',
+			surname: 'Lopez',
+			dni: '222333',
+			city: "Cuenca",
+			profession: [
+				"Futbolista"
+			],
+			medicalHistory: [
+				{
+					"specialist": "Medico de cabecera",
+					"diagnosis": "Resaca",
+					"date": new Date( 2018,11,14)
+				},
+				{
+					"specialist": "Traumatologo",
+					"diagnosis": "Fractura de ligamento cruzado",
+					"date": new Date( 2015,5,14)
+				},
+				{
+					"specialist": "Traumatologo",
+					"diagnosis": "Esguince de tobillo",
+					"date": new Date( 2016,4,24)
+				}
+			]
+		},
+		{
+			name: 'Carlos',
+			surname: 'Lechon',
+			dni: '333444',
+			city: "Madrid",
+			profession: [
+				"Lechero",
+				"Repartidor"
+			],
+			medicalHistory: [
+				{
+					"specialist": "Reumatologo",
+					"diagnosis": "Osteoporosis",
+					"date": new Date( 2016,5,14)
+				},
+				{
+					"specialist": "Medico de cabecera",
+					"diagnosis": "Resfriado",
+					"date": new Date( 2017,1,5)
+				}
+			]
+		},
+		{
+			name: 'Diana',
+			surname: 'Pintor',
+			dni: '555666',
+			city: "Melilla",
+			profession: [
+				"Pintora",
+				"Directora de subastas"
+			],
+			medicalHistory: [
+				{
+					"specialist": "Medico de cabecera",
+					"diagnosis": "Diarrea aguda",
+					"date": new Date( 2016,5,14)
+				},
+				{
+					"specialist": "Traumatologo",
+					"diagnosis": "Síndrome del tunel carpiano",
+					"date": new Date( 2019,3,15)
+				}
+			]
+		},
+		{
+			name: 'Raquel',
+			surname: 'Dueñas',
+			dni: '666777',
+			city: "Barcelona",
+			profession: [
+				"Chef",
+				"Ayudante de cocina",
+				"Camarero"
+			],
+			medicalHistory: [
+				{
+					"specialist": "Cardiologo",
+					"diagnosis": "Arritmia",
+					"date": new Date( 2019,3,26)
+				},
+				{
+					"specialist": "Medico de cabecera",
+					"diagnosis": "Dermatitis",
+					"date": new Date( 2017,1,5)
+				}
+			]
+		},
+		{
+			name: 'Mario Alejandro',
+			surname: 'Arcentales',
+			dni: '777888',
+			city: "Oviedo",
+			profession: [
+				"Minero"
+			],
+			medicalHistory: [
+				{
+					"specialist": "Endocrino",
+					"diagnosis": "Anemia crónica",
+					"date": new Date( 2018,10,26)
+				},
+				{
+					"specialist": "Neumologo",
+					"diagnosis": "Silicosis",
+					"date": new Date( 2019,10,5)
+				}
+			]
+		},
+		{
+			_id: new mongoose.Types.ObjectId('5e4a60fb7be8f229b54a16cb'),
+			name: 'Ana',
+			surname: 'Durcal',
+			dni: '555555',
+			city: "Huelva",
+			profession: [
+				"Frutera",
+				"Monitora de tiempo libre"
+			],
+			medicalHistory: []
+		}
+
+	];
+	testPatient = {
+		_id: new mongoose.Types.ObjectId('5e3a60fb7be8f029b54a16c9'),
+		name: 'Ana',
+		surname: 'Durcal',
+		dni: '555555',
+		city: "Huelva",
+		profession: [
+			"Frutera",
+			"Monitora de tiempo libre"
+		],
+		medicalHistory: []
+	};
+	test = await Patient.collection.insertMany(data);
+});
+
+//TESTS
+describe("BBDD Tests", function () {
+	describe('Creating Patient', function() {
+        it('Creating a new Patient', async function() {
+            this.score = 1;
+            this.msg_err = "The patient has not been created correctly"
+            this.msg_ok = "Patient created correctly!"
+            const patient = await controller.create(testPatient)
+            const patientD = await Patient.findOne({ _id: '5e3a60fb7be8f029b54a16c9' });
+            should.equal(!testPatient.isNew, true) ;
+            should.equal(patient.toString(), patientD.toString()) ;
+
+        });
+    });
+    describe('Get Patients list', function() {
+        it('Getting the list of all available patients', async function() {
+            this.score = 1;
+            this.msg_err = "The patients have not been listed correctly"
+            this.msg_ok = "Patients listed correctly!"
+            const patients = await controller.list();
+            should.equal(patients.length, 7)
+            should.equal(typeof patients[0], 'object');
+
+        })
+    });
+
+    describe('Reading Patient details',function() {
+        it('Finding patient with the id 5e4a60fb7be8f229b54a16cb', async function() {
+            this.score = 1;
+            this.msg_err = "The patient with the id 5e4a60fb7be8f229b54a16cb has not been shown correctly";
+            this.msg_ok = "Patient shown correctly!";
+            const patient = await controller.read('5e4a60fb7be8f229b54a16cb');
+            should.equal(patient._id.toString(), '5e4a60fb7be8f229b54a16cb');
+        })
+    });
+
+    describe('Update Patient record', function() {
+        it('Updating Patient with the id 5e4a60fb7be8f229b54a16cb', async function(){
+            this.score = 1;
+            this.msg_err = "The patient with the id 5e4a60fb7be8f229b54a16cb has not been updated correctly"
+            this.msg_ok = "Patient updated correctly!";
+            const patient = await controller.update({ _id: '5e4a60fb7be8f229b54a16cb' },{dni:'777777'});
+            const patientD = await Patient.findOne({ _id: '5e4a60fb7be8f229b54a16cb' });
+            should.equal(patient.dni,patientD.dni);
+        })
+    });
+
+    describe('Find Patients by City', function()  {
+        it('Finding Patients with city= Madrid', async function(){
+            this.score = 1;
+            this.msg_err = "The patients with city= Madrid have not been retrieved correctly"
+            this.msg_ok = "Patients retrieved correctly!";
+            const patients= await controller.filterPatientsByCity('Madrid');
+			should.equal(patients.length , 2);
+			should.equal(typeof patients[0], 'object');
+			const patients2 = await controller.filterPatientsByCity('Barcelona');
+			should.equal(patients2.length , 1);
+			should.equal(typeof patients2[0], 'object');
+
+        })
+    });
+
+	describe('Filter Patients by Diagnosis', function() {
+		it('Filtering Patients with Diagnosis= Osteoporosis', async function() {
+            this.score = 1;
+            this.msg_err = "The patients with Diagnosis= Osteoporosis have not been retrieved correctly"
+            this.msg_ok = "Patients with Diagnosis= Osteoporosis have been retrieved correctly!";
+            const patients= await controller.filterPatientsByDiagnosis('Osteoporosis');
+            should.equal(patients.length, 1);
+            should.equal(typeof patients[0], 'object');
+            this.msg_err = "The patients with Diagnosis= Resfriado have not been retrieved correctly"
+            this.msg_ok = "Patients with Diagnosis= Resfriado have been retrieved correctly!";
+            const patients2= await controller.filterPatientsByDiagnosis('Resfriado');
+            should.equal(patients2.length, 2);
+            should.equal(typeof patients2[0], 'object');
+		})
+	});
+
+	describe('Filter Patients by Speacialist And Date', function() {
+		it('Filtering Patients with Speacialist= Medico de cabecera and dates between 2016-04-14 to 2016-07-15', async function() {
+            this.score = 1.5;
+            this.msg_err = "The patients Speacialist= Medico de cabecera and dates between 2016-04-14 to 2016-07-15 have not been retrieved correctly"
+            this.msg_ok = "Patients with Speacialist= Medico de cabecera and dates between 2016-04-14 to 2016-07-15 have been retrieved correctly!";
+            const patients= await controller.filterPatientsBySpeacialistAndDate('Medico de cabecera',new Date(2016, 4, 14),
+				new Date(2016, 7, 15));
+            should.equal(patients.length ,1 );
+            should.equal(typeof patients[0], 'object');
+		})
+	});
+
+	describe('Add Patient History', function() {
+		it('Adding record to Patient with the id 5e4a60fb7be8f229b54a16cb', async function() {
+            this.score = 1.5;
+            this.msg_err = "The medical record has not been added correctly to the patient with id 5e4a60fb7be8f229b54a16cb"
+            this.msg_ok = "The medical record has been added correctly to the patient with id 5e4a60fb7be8f229b54a16cb!";
+			var record = {"specialist" : "Endocrinologo", "diagnosis" : "Diabetes", "date" : new Date(2019,10,5) };
+            const patient= await controller.addPatientHistory({ _id: '5e4a60fb7be8f229b54a16cb' },record)
+            const patient2= await controller.addPatientHistory({ _id: '5e4a60fb7be8f229b54a16cb' },record)
+            should.equal(patient.medicalHistory[0].specialist, 'Endocrinologo');
+            should.equal(patient.medicalHistory[0].diagnosis,'Diabetes');
+            should.equal(patient2.medicalHistory[1].diagnosis,'Diabetes');
+            should.equal(patient2.medicalHistory[1].specialist, 'Endocrinologo');
+		})
+	});
+
+	describe('Remove Patient by ID', function() {
+		it('Removing Patient with the ID 5e4a60fb7be8f229b54a16cb', async function() {
+            this.score = 1;
+            this.msg_err = "The Patient with the ID 5e4a60fb7be8f229b54a16cb has not been removed correctly"
+            this.msg_ok = "The Patient with the ID 5e4a60fb7be8f229b54a16cb has been removed correctly!";
+            const patient= await controller.delete('5e4a60fb7be8f229b54a16cb');
+			const patientD = await Patient.findOne({ _id: '5e4a60fb7be8f229b54a16cb' });
+			should.equal(patientD , null);
+		})
+	});
+
+});
