@@ -1,13 +1,13 @@
 {
-  "name": "rest_server",
-  "version": "0.0.1",
-  "private": true,
-  "disableHashCheck": true,
+  "name": "P4_ODM_BBDDNR",
+  "author": "BBDD-ETSIT",
+  "license": "GNU",
+  "version": "0.0.0",
   "info": {
-    "githubURL": "ging/bbdd-practica-odm",
-    "serverUrl": "https://autocorector.dit.upm.es/",
-    "courseId": "7775",
-    "assignmentId": "77311"
+      "githubURL": "BBDD-ETSIT/P4_ODM_BBDDNR",
+      "serverUrl": "https://autocorector.dit.upm.es/",
+      "courseId": "7775",
+      "assignmentId": "77311"
   },
   "scripts": {
     "start": "node rest_server.js",
