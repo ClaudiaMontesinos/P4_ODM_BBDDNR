@@ -200,8 +200,8 @@ Las funciones hacen lo siguiente:
 
 - Un array de objetos de pacientes
 
-### 5.1 Busqueda con filtros avanzados (Opcional)
-- Se sugiere implementar esta función para que el estudiante practique el manejo de filtros para realizar consultas dentro de un rango de fechas. Sin embargo, esta función no será evaluada dentro de la práctica ni considerada dentro de los tests del autocorector.
+### 5.1 Búsqueda con filtros avanzados (Opcional)
+- Se sugiere implementar esta función para que el estudiante practique el manejo de filtros, para realizar consultas dentro de un rango de fechas. Sin embargo, esta función no será evaluada dentro de la práctica ni considerada dentro de los tests del autocorector.
 
 ### filterPatientsBySpeacialistAndDate(specialist, sDate,fDate)
 
