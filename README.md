@@ -54,7 +54,7 @@ Abra un terminal en su ordenador y siga los siguientes pasos.
 El proyecto debe clonarse en el ordenador desde el que se está trabajando con:
 
 ```
-$ git clone https://github.com/ging/bbdd-practica-odm
+$ git clone https://github.com/BBDD-ETSIT/P4_ODM_BBDDNR
 ```
 
 y entrar en el directorio de trabajo
@@ -160,6 +160,20 @@ Las funciones hacen lo siguiente:
 
 - El resultado de la operacion de borrado
 
+### addPatientHistory(patientId, medicalRecord) 
+
+**Descipcion:**
+- Añade un nueva consulta al historial medico del paciente representado por patientId
+
+**Parametros:**
+
+- patientId - Id del paciente al que se le añade una nueva consulta al historial
+- medicalRecord - Objeto con los datos de la consulta
+
+**Returns:**
+
+- El objeto paciente con los datos actualizados incluido la nueva consulta
+
 ### filterPatientsByCity(city)
 
 **Descipcion:**
@@ -186,6 +200,9 @@ Las funciones hacen lo siguiente:
 
 - Un array de objetos de pacientes
 
+### 5.1 Busqueda con filtros avanzados (Opcional)
+- Se sugiere implementar esta función para que el estudiante practique el manejo de filtros para realizar consultas dentro de un rango de fechas. Sin embargo, esta función no será evaluada dentro de la práctica ni considerada dentro de los tests del autocorector.
+
 ### filterPatientsBySpeacialistAndDate(specialist, sDate,fDate)
 
 **Descipcion:**
@@ -200,20 +217,6 @@ Las funciones hacen lo siguiente:
 **Returns:**
 
 - Un array de objetos de pacientes
-
-### addPatientHistory(patientId, medicalRecord) 
-
-**Descipcion:**
-- Añade un nueva consulta al historial medico del paciente representado por patientId
-
-**Parametros:**
-
-- patientId - Id del paciente al que se le añade una nueva consulta al historial
-- medicalRecord - Objeto con los datos de la consulta
-
-**Returns:**
-
-- El objeto paciente con los datos actualizados incluido la nueva consulta
 
 
 ## 6. Prueba de la práctica 
@@ -240,8 +243,9 @@ $ autocorector --upload
 El alumno podrá subir al Moodle la entrega tantas veces como desee pero se quedará registrada solo la última subida.
 
 **RÚBRICA**: Cada método que se pide resolver de la practica se puntuara de la siguiente manera:
--  **1 punto por cada uno de las siguientes funciones realizadas:**  list, read, create, update, delete, filterPatientsByCity y filterPatientsByDiagnosis
--  **1,5 puntos por cada uno de las siguientes funciones realizadas:**  filterPatientsBySpeacialistAndDate y addPatientHistory 
+-  **1 punto por cada uno de las siguientes funciones realizadas:**  list, read, create, update y delete 
+-  **1,5 puntos por cada uno de las siguientes funciones realizadas:**  filterPatientsByCity y filterPatientsByDiagnosis
+-  **2 puntos por realizar la siguiente función:** addPatientHistory 
 
 Si pasa todos los tests se dará la máxima puntuación. 
 
