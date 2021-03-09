@@ -227,7 +227,7 @@ describe("BBDD Tests", function () {
 
     describe('Find Patients by City', function()  {
         it('Finding Patients with city= Madrid', async function(){
-            this.score = 1;
+            this.score = 1.5;
             this.msg_err = "The patients with city= Madrid have not been retrieved correctly"
             this.msg_ok = "Patients retrieved correctly!";
             const patients= await controller.filterPatientsByCity('Madrid');
@@ -242,7 +242,7 @@ describe("BBDD Tests", function () {
 
 	describe('Filter Patients by Diagnosis', function() {
 		it('Filtering Patients with Diagnosis= Osteoporosis', async function() {
-            this.score = 1;
+            this.score = 1.5;
             this.msg_err = "The patients with Diagnosis= Osteoporosis have not been retrieved correctly"
             this.msg_ok = "Patients with Diagnosis= Osteoporosis have been retrieved correctly!";
             const patients= await controller.filterPatientsByDiagnosis('Osteoporosis');
@@ -256,7 +256,7 @@ describe("BBDD Tests", function () {
 		})
 	});
 
-	describe('Filter Patients by Speacialist And Date', function() {
+	/*describe('Filter Patients by Speacialist And Date', function() {
 		it('Filtering Patients with Speacialist= Medico de cabecera and dates between 2016-04-14 to 2016-07-15', async function() {
             this.score = 1.5;
             this.msg_err = "The patients Speacialist= Medico de cabecera and dates between 2016-04-14 to 2016-07-15 have not been retrieved correctly"
@@ -266,11 +266,11 @@ describe("BBDD Tests", function () {
             should.equal(patients.length ,1 );
             should.equal(typeof patients[0], 'object');
 		})
-	});
+	});*/
 
 	describe('Add Patient History', function() {
 		it('Adding record to Patient with the id 5e4a60fb7be8f229b54a16cb', async function() {
-            this.score = 1.5;
+            this.score = 2;
             this.msg_err = "The medical record has not been added correctly to the patient with id 5e4a60fb7be8f229b54a16cb"
             this.msg_ok = "The medical record has been added correctly to the patient with id 5e4a60fb7be8f229b54a16cb!";
 			var record = {"specialist" : "Endocrinologo", "diagnosis" : "Diabetes", "date" : new Date(2019,10,5) };
