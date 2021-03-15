@@ -60,7 +60,7 @@ $ git clone https://github.com/BBDD-ETSIT/P4_ODM_BBDDNR
 y entrar en el directorio de trabajo
 
 ```
-$ cd bbdd-practica-odm
+$ cd P4_ODM_BBDDNR
 ```
 
 Una vez dentro de la carpeta, se instalan las dependencias con:
