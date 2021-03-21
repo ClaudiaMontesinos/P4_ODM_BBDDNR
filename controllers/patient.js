@@ -1,7 +1,7 @@
 // Cargamos los modelos para usarlos posteriormente
 const Patient = require('../models/patient');
 
-exports.list = async function() {
+exports.list = list() {
     // Rellene aqui ...
 }
 
